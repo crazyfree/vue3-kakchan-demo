@@ -45,5 +45,5 @@ jobs:
       # so we need to run this extra step to see if any missing modules
       - name: install missing modules if any 
         run: yarn # add `--omit=dev` in case of release
-      - name: ✅ Lint
+      - name: ✅ Unit test
         run: yarn test:unit:once
