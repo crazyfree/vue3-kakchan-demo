@@ -1,4 +1,6 @@
 ## vue3-demo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/23ead64f-d48d-4df9-9952-e287181a17ec/deploy-status)](https://app.netlify.com/sites/vue3demo/deploys)
+
 You can find the preview link [HERE]()
 
 ### Limitations
