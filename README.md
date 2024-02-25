@@ -22,3 +22,31 @@ To fix:
 ```
 rm -rf node_modules yarn.lock && yarn
 ```
+
+### Final test results 
+The test results should be updated automatically to another place in a real project 
+
+ % Coverage report from v8
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
+------------------------|---------|----------|---------|---------|-------------------------
+All files               |    46.4 |    47.05 |   17.64 |    46.4 |                         
+ src                    |       0 |        0 |       0 |       0 |                         
+  App.vue               |       0 |        0 |       0 |       0 | 1-17                    
+  main.ts               |       0 |        0 |       0 |       0 | 1-14                    
+ src/components         |   94.05 |      100 |   66.66 |   94.05 |                         
+  SearchInput.vue       |     100 |      100 |     100 |     100 |                         
+  UserPosts.vue         |   91.11 |      100 |     100 |   91.11 | 22-25                   
+  UserTable.vue         |   95.23 |      100 |      50 |   95.23 | 9-10                    
+ src/components/icons   |       0 |        0 |       0 |       0 |                         
+  IconCommunity.vue     |       0 |        0 |       0 |       0 | 1-7                     
+  IconDocumentation.vue |       0 |        0 |       0 |       0 | 1-7                     
+  IconEcosystem.vue     |       0 |        0 |       0 |       0 | 1-7                     
+  IconSupport.vue       |       0 |        0 |       0 |       0 | 1-7                     
+  IconTooling.vue       |       0 |        0 |       0 |       0 | 1-19                    
+ src/router             |       0 |        0 |       0 |       0 |                         
+  index.ts              |       0 |        0 |       0 |       0 | 1-15                    
+ src/stores             |      68 |      100 |      20 |      68 |                         
+  user.ts               |      68 |      100 |      20 |      68 | 30-33,35-38,40-41,43-48 
+ src/views              |       0 |        0 |       0 |       0 |                         
+  UserTableView.vue     |       0 |        0 |       0 |       0 | 1-34                    
+
