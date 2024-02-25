@@ -1,0 +1,32 @@
+name: push to PROD environment
+on:
+  push:
+    tags: ["v1.*", "v2.*"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    # permissions:
+    #   contents: read
+    #   packages: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: setup node 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          ## this setup is for node_modules caching
+          ## see more at https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+          cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
+      # cache globally, not only node_modules
+      # so we need to run this extra step to see if any missing modules
+      - name: install missing modules if any
+        run: yarn # add `--omit=dev` in case of release
+      - name: ✅ Lint
+        run: yarn lint
+
