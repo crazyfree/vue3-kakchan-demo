@@ -1,0 +1,77 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Remove yarn.lock since it caused the rror",
+      "command": "rm -rf yarn.lock node_modules"
+    },
+    {
+      "name": "Install Dependencies",
+      "command": "yarn"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "dev": {
+      "name": "dev",
+      "command": "yarn dev",
+      "runAtStart": true
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build",
+      "runAtStart": false
+    },
+    "preview": {
+      "name": "preview",
+      "command": "yarn preview",
+      "runAtStart": false
+    },
+    "test:unit": {
+      "name": "test:unit",
+      "command": "yarn test:unit",
+      "runAtStart": false
+    },
+    "test:unit:once": {
+      "name": "test:unit:once",
+      "command": "yarn test:unit:once",
+      "runAtStart": false
+    },
+    "test:e2e": {
+      "name": "test:e2e",
+      "command": "yarn test:e2e",
+      "runAtStart": false
+    },
+    "test:e2e:dev": {
+      "name": "test:e2e:dev",
+      "command": "yarn test:e2e:dev",
+      "runAtStart": false
+    },
+    "build-only": {
+      "name": "build-only",
+      "command": "yarn build-only",
+      "runAtStart": false
+    },
+    "type-check": {
+      "name": "type-check",
+      "command": "yarn type-check",
+      "runAtStart": false
+    },
+    "lint": {
+      "name": "lint",
+      "command": "yarn lint",
+      "runAtStart": false
+    },
+    "format": {
+      "name": "format",
+      "command": "yarn format",
+      "runAtStart": false
+    },
+    "prepare": {
+      "name": "prepare",
+      "command": "yarn prepare",
+      "runAtStart": false
+    }
+  }
+}
