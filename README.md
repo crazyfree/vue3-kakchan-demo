@@ -1,7 +1,7 @@
 ## vue3-demo
 [![Netlify Status](https://api.netlify.com/api/v1/badges/23ead64f-d48d-4df9-9952-e287181a17ec/deploy-status)](https://app.netlify.com/sites/vue3demo/deploys)
 
-You can find the preview link [HERE]()
+You can find the preview link [HERE](https://65dad9e7eef7f50008605f7a--vue3demo.netlify.app/)
 
 ### Limitations
 Since it's for demo purpose only I ignored the build process, so just lint and test are perform in CI CD
@@ -22,8 +22,13 @@ Instead change the require of index.js in /Users/leo/workspace/sites/viziondary/
 
 To fix: 
 ```
-rm -rf node_modules yarn.lock && yarn
+"resolutions": {
+    "strip-ansi": "6.0.1",
+    "string-width": "4.2.2",
+    "wrap-ansi": "7.0.0"
+  },
 ```
+see https://github.com/eslint/eslint/discussions/17215#discussioncomment-7630009 for more details 
 
 ### Final test results 
 The test results should be updated automatically to another place in a real project 
